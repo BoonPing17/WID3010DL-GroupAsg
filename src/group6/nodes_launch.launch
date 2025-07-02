@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="group6" type="main_node.py" name="main_node" output="screen" />
+  <node pkg="group6" type="stt_node.py" name="stt_node" output="screen" />
+  <node pkg="group6" type="emotion.py" name="emotion_node" output="screen" />
+</launch>
