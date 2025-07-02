@@ -31,7 +31,15 @@ This project is a ROS-based multimodal assistant that listens to the lecturer, d
 
 ## 🚀 How to Launch
 
-### 1. Install Dependencies
+
+### 1. Clone Project into Your `catkin_ws/src`
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/BoonPing17/WID3010DL-GroupAsg.git
+cd ..
+```
+
+### 2. Install Dependencies
 
 #### System Dependencies
 ```bash
@@ -44,13 +52,19 @@ sudo apt install ros-noetic-usb-cam ros-noetic-cv-bridge python3-pip
 pip3 install deepface opencv-python pyttsx3 SpeechRecognition
 ```
 
-
-### 2. Make Python Files Executable
-```bash
-chmod +x ~/catkin_ws/src/group6/src/*.py
+### 3. Build & Source
+``` bash
+catkin build
+source devel/setup.bash
 ```
 
-### 3. Launch the Entire System
+### 4. Make Python Files Executable
+```bash
+chmod +x /src/group6/src/*.py
+```
+
+
+### 5. Launch the Entire System
 ```bash
 roslaunch group6 classroom_robot.launch
 ```
@@ -60,6 +74,6 @@ This will:
 - Launch all nodes in your project
 - Begin listening for instructor voice prompts (e.g., “What’s the emotion of the class right now?”)
 
-### 4. Output
+## Output
 - **CSV logs** are saved to: results/class_engagement_log.csv
 - **Overlay images** are saved to: results/overlay_images/
